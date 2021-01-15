@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { UserLoginComponent } from './Login/user-login/user-login.component';
 import { FlightSearchComponent } from './UserOperation/flight-search/flight-search.component';
 import { UserNavComponent } from './NavBar/user-nav/user-nav.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [

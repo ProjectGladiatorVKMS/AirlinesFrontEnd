@@ -1,4 +1,3 @@
-<app-user-nav></app-user-nav>
 <form style="width: 50%;margin: auto;" (ngSubmit)="searchFlights()">
     <div class="form-row">
         <div class="form-group col-md-6">
@@ -27,3 +26,36 @@
     </div>
     <button type="submit" class="btn btn-primary">Search Flights</button>
   </form>
+  <br>
+  <br>
+
+  <table *ngIf="flightFlag" style="width: 80%; margin: auto;" class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Flight No.</th>
+        <th scope="col">Source</th>
+        <th scope="col">Destination</th>
+        <th scope="col">Departure Time</th>
+        <th scope="col">Arrival Time</th>
+        <th scope="col">Journey Date</th>
+        <th scope="col">Duration</th>
+        <th scope="col">Economy Class Cost</th>
+        <th scope="col">Business Class Cost</th>
+        <th scope="col">Book</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let f of flight">
+      <tr>
+        <th scope="row">{{f.flightId}}</th>
+        <td>{{f.source}}</td>
+        <td>{{f.destination}}</td>
+        <td>{{f.departure}}</td>
+        <td>{{f.arrival}}</td>
+        <td>{{f.journeyDate}}</td>
+        <td>{{f.duration}}</td>
+        <td>{{f.economyClassCost}}</td>
+        <td>{{f.businessClassCost}}</td>
+        <td><button type="button" class="btn btn-primary" (click)="flightIdStore(f.flightId)">Book Now</button></td>
+      </tr>
+    </tbody>
+  </table>

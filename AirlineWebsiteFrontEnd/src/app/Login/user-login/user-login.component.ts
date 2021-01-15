@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { UserLogin } from 'src/app/Model/user-login';
 import { LoginserviceService } from 'src/app/Services/loginservice.service';
 
@@ -11,7 +12,7 @@ export class UserLoginComponent implements OnInit {
 
   userLogin = new UserLogin();
 
-  constructor(private loginService: LoginserviceService) { }
+  constructor(private loginService: LoginserviceService, private router: Router) { }
 
   ngOnInit() {
   }
@@ -20,6 +21,12 @@ export class UserLoginComponent implements OnInit {
     this.loginService.userLogin(this.userLogin).subscribe(response => {
       alert(JSON.stringify(response));
       console.log(response);
+      if(response.result==true)
+      {
+        sessionStorage.setItem('userId',String(response.fetchedUserId));
+        this.router.navigate(['flightSearch']);
+      }
+
     })
   }
 
