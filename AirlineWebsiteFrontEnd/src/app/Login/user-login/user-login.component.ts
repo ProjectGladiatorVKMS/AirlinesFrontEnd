@@ -9,7 +9,7 @@ import { LoginserviceService } from 'src/app/Services/loginservice.service';
 })
 export class UserLoginComponent implements OnInit {
 
-  userLogin: UserLogin = new UserLogin();
+  userLogin = new UserLogin();
 
   constructor(private loginService: LoginserviceService) { }
 
