@@ -21,13 +21,7 @@ export class FlightSearchComponent implements OnInit {
     console.log(this.flightSearchDT);
     this.userService.fetchFlights(this.flightSearchDT).subscribe(response => {
       console.log(JSON.stringify(response));
-      // response.forEach(i => {
-      //   this.flight[i] = response[i];
-      // });
-    this.flight =response;
-      // for(response){
-      //   this.flight[i]=response[i];
-      // }
+      this.flight =response;
       console.log(this.flight);
       alert(JSON.stringify(response));
     })
