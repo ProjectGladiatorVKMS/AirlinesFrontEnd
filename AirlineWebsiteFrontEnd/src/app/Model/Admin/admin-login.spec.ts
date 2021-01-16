@@ -1,4 +1,4 @@
-import { AdminLogin } from './Admin/admin-login';
+import { AdminLogin } from './admin-login';
 
 describe('AdminLogin', () => {
   it('should create an instance', () => {

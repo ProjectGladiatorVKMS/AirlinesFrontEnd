@@ -10,6 +10,14 @@ import { UserLoginComponent } from './Login/user-login/user-login.component';
 import { FlightSearchComponent } from './UserOperation/flight-search/flight-search.component';
 import { UserNavComponent } from './NavBar/user-nav/user-nav.component';
 import { RouterModule } from '@angular/router';
+import { HomeComponent } from './Home/home/home.component';
+import { HomeNavComponent } from './NavBar/home-nav/home-nav.component';
+import { AddFlightComponent } from './AdminOperation/add-flight/add-flight.component';
+import { DisplayAllFlightComponent } from './AdminOperation/display-all-flight/display-all-flight.component';
+import { AdminNavComponent } from './NavBar/admin-nav/admin-nav.component';
+import { BookFlightComponent } from './UserOperation/book-flight/book-flight.component';
+import { UserRegistrationComponent } from './UserOperation/user-registration/user-registration.component';
+import { PaymentWindowComponent } from './UserOperation/payment-window/payment-window.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +25,15 @@ import { RouterModule } from '@angular/router';
     AdminLoginComponent,
     UserLoginComponent,
     FlightSearchComponent,
-    UserNavComponent
+    UserNavComponent,
+    HomeComponent,
+    HomeNavComponent,
+    AddFlightComponent,
+    DisplayAllFlightComponent,
+    AdminNavComponent,
+    BookFlightComponent,
+    UserRegistrationComponent,
+    PaymentWindowComponent
   ],
   imports: [
     BrowserModule,

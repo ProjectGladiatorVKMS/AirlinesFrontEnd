@@ -1,0 +1,38 @@
+<app-user-nav></app-user-nav>
+
+
+<form style="width: 30%;margin: auto;" (ngSubmit)="addBooking()">
+    <div class="form-row">
+    <div class="form-group col-md-6">
+        <label for="inputEmail1">Enter Email Id</label>
+        <input type="email" class="form-control" id="email" name="email"  [(ngModel)]='bookingDT.emailId'>
+    </div>
+        <form style="width: 30%;margin: auto;" (ngSubmit)="addPassenger()" >
+        <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="inputFName4">First Name</label>
+            <input type="text" class="form-control" id="firstName" name="firstName" [(ngModel)]='firstName'>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputLNamel4">Last Name</label>
+            <input type="text" class="form-control" id="lastName" name="lastName"  [(ngModel)]='lastName'>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputTitle">Gender</label>
+            <select id="inputTitle" class="form-control" name="gender" [(ngModel)]='gender'>
+              <option selected>Male</option>
+              <option>Female</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="inputContact">Age</label>
+            <input type="number" class="form-control" id="age" name="age"  [(ngModel)]='age'>
+          </div>
+    </div>
+    <button type="submit" class="btn btn-primary " [disabled]="disable" >Add</button>
+    </form>
+</div>
+    <button type="submit" class="btn btn-primary " [disabled]="!disable" routerLink="/paymentWindow">Proceed to Payment</button>
+  </form>
+  <router-outlet></router-outlet>

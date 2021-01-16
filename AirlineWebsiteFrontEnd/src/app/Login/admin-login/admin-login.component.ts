@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AdminLogin } from 'src/app/Model/admin-login';
+import { Router } from '@angular/router';
+import { AdminLogin } from 'src/app/Model/Admin/admin-login';
 import { LoginserviceService } from 'src/app/Services/loginservice.service';
 
 @Component({
@@ -12,7 +13,7 @@ export class AdminLoginComponent implements OnInit {
 
   adminLogin: AdminLogin = new AdminLogin();
 
-  constructor(private loginService: LoginserviceService) { }
+  constructor(private loginService: LoginserviceService, private router:Router) { }
 
   ngOnInit() {
   }
@@ -21,6 +22,12 @@ export class AdminLoginComponent implements OnInit {
     console.log(this.adminLogin);
     this.loginService.adminLogin(this.adminLogin).subscribe(response => {
       alert(JSON.stringify(response));
+      if(response.result==true)
+      {
+        sessionStorage.setItem('adminId',String(response.fetchedUserId));
+        this.router.navigate(['addFlight']);
+      }
+      
       console.log(response);
     })
   }

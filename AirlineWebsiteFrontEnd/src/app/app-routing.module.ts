@@ -1,3 +1,10 @@
+import { PaymentWindowComponent } from './UserOperation/payment-window/payment-window.component';
+import { BookFlightComponent } from './UserOperation/book-flight/book-flight.component';
+import { UserRegistrationComponent } from './UserOperation/user-registration/user-registration.component';
+import { DisplayAllFlightComponent } from './AdminOperation/display-all-flight/display-all-flight.component';
+import { AddFlightComponent } from './AdminOperation/add-flight/add-flight.component';
+import { AdminLoginComponent } from './Login/admin-login/admin-login.component';
+import { HomeComponent } from './Home/home/home.component';
 import { FlightSearchComponent } from './UserOperation/flight-search/flight-search.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -5,8 +12,16 @@ import { UserLoginComponent } from './Login/user-login/user-login.component';
 
 
 const routes: Routes = [
+  {path: '',component: HomeComponent, pathMatch:'full'},
   { path: 'flightSearch', component: FlightSearchComponent },
-  { path: 'userLogin', component: UserLoginComponent }
+  { path: 'userLogin', component: UserLoginComponent },
+  { path: 'home', component: HomeComponent },
+  {path: 'adminLogin', component: AdminLoginComponent},
+  {path:'addFlight',component: AddFlightComponent},
+  {path:'displayAllFlight', component: DisplayAllFlightComponent},
+  {path: 'userRegistration', component: UserRegistrationComponent},
+  {path:'bookFlight', component: BookFlightComponent},
+  {path: 'paymentWindow', component: PaymentWindowComponent}
 ];
 
 @NgModule({

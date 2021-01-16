@@ -1,0 +1,45 @@
+<app-admin-nav></app-admin-nav>
+<form style="width: 30%;margin: auto;" (ngSubmit)="addFlight()">
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="inputFName4">Enter Source</label>
+            <input type="text" class="form-control"  name="source" [(ngModel)]='flightDT.source'>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputLNamel4">Enter Destination</label>
+            <input type="text" class="form-control"  name="destination"  [(ngModel)]='flightDT.destination'>
+          </div>
+      <div class="form-group col-md-6">
+        <label for="inputPassword4">Journey Date</label>
+        <input type="date" class="form-control"  name="journeyDate"  [(ngModel)]='flightDT.journeyDate'>
+      </div>
+    
+    <div class="form-group col-md-6">
+        <label for="inputPassword4">Departure From Source</label>
+        <input type="time" class="form-control"  name="departureTime"  [(ngModel)]='flightDT.departureTime'>
+      </div>
+    
+    <div class="form-group col-md-6">
+        <label for="inputPassword4">Arrival At Destination</label>
+        <input type="time" class="form-control" name="arrivalTime"  [(ngModel)]='flightDT.arrivalTime'>
+      </div>
+    <div class="form-group">
+      <label for="inputAddress">Economy Class Seats</label>
+      <input type="number" class="form-control"  name="economySeats"  [(ngModel)]='flightDT.economySeats'>
+    </div>
+    <div class="form-group">
+        <label for="inputAddress">Cost of Economy Class</label>
+        <input type="number" class="form-control"  name="economyClassCost"  [(ngModel)]='flightDT.economyClassCost'>
+      </div>
+       
+    <div class="form-group">
+        <label for="inputAddress">Business Class Seats</label>
+        <input type="number" class="form-control"  name="businessSeats"  [(ngModel)]='flightDT.businessSeats'>
+      </div>
+      <div class="form-group">
+          <label for="inputAddress">Cost of Business Class</label>
+          <input type="number" class="form-control"  name="businessClassCost"  [(ngModel)]='flightDT.businessClassCost'>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Add Flight</button>
+  </form>

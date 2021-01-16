@@ -1,4 +1,4 @@
-
+<app-user-nav></app-user-nav>
 <form style="width: 30%;margin: auto;" (ngSubmit)="searchFlights()">
     <div class="form-row">
         <div class="form-group col-md-6">
@@ -29,7 +29,7 @@
   </form>
   <br>
   <br>
-  <div *ngIf="flight.length">
+  <div *ngIf="flight">
   <table  style="width: 80%; margin: auto;" class="table table-striped">
     <thead>
       <tr>
@@ -56,7 +56,7 @@
         <td>{{f.duration}}</td>
         <td>{{f.economyClassCost}}</td>
         <td>{{f.businessClassCost}}</td>
-        <td><button type="button" class="btn btn-primary" (click)="flightIdStore(f.flightId)">Book Now</button></td>
+        <td><button type="button" class="btn btn-primary" (click)="flightStore(f.flightId, f.economyClassCost, f.businessClassCost)" routerLink="/bookFlight">Book Now</button></td>
       </tr>
     </tbody>
   </table>

@@ -1,0 +1,39 @@
+<form style="width: 30%;margin: auto;" (ngSubmit)="registerUser()">
+    <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputTitle">Title</label>
+            <select id="inputTitle" class="form-control" name="inputTitle" [(ngModel)]='user.title'>
+              <option selected>Mr</option>
+              <option>Ms</option>
+              <option>Mrs</option>
+            </select>
+          </div>
+        <div class="form-group col-md-6">
+            <label for="inputFName4">First Name</label>
+            <input type="text" class="form-control" id="firstName" name="firstName" [(ngModel)]='user.fName'>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputLNamel4">Last Name</label>
+            <input type="text" class="form-control" id="lastName" name="lastName"  [(ngModel)]='user.lName'>
+          </div>
+      
+      <div class="form-group col-md-6">
+        <label for="inputEmail1">Email Id</label>
+        <input type="email" class="form-control" id="email" name="email"  [(ngModel)]='user.emailId'>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputContact">Contact Number</label>
+      <input type="number" class="form-control" id="contact" name="contact"  [(ngModel)]='user.contactNo'>
+    </div>
+    <div class="form-group">
+        <label for="inputDOB">Date Of Birth</label>
+        <input type="date" class="form-control" id="dob" name="dob"  [(ngModel)]='user.dateOfBirth'>
+      </div>
+      <div class="form-group">
+        <label for="inputPassword4">Password</label>
+        <input type="password" class="form-control" id="password" name="password"  [(ngModel)]='user.userPassword'>
+      </div>
+    <button type="submit" class="btn btn-primary">Register</button>
+  </form>
+  <router-outlet></router-outlet>
