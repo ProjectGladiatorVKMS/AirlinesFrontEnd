@@ -1,4 +1,5 @@
-<form style="width: 50%;margin: auto;" (ngSubmit)="searchFlights()">
+
+<form style="width: 30%;margin: auto;" (ngSubmit)="searchFlights()">
     <div class="form-row">
         <div class="form-group col-md-6">
             <label for="inputFName4">Enter Source</label>
@@ -28,7 +29,8 @@
   </form>
   <br>
   <br>
-  <table *ngIf="flightFlag" style="width: 80%; margin: auto;" class="table table-striped">
+  <div *ngIf="flight.length">
+  <table  style="width: 80%; margin: auto;" class="table table-striped">
     <thead>
       <tr>
         <th scope="col">Flight No.</th>
@@ -58,3 +60,5 @@
       </tr>
     </tbody>
   </table>
+</div>
+  <router-outlet></router-outlet>

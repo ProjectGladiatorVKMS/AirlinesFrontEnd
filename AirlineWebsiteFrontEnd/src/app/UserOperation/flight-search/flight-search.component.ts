@@ -11,8 +11,7 @@ import { Flight } from 'src/app/Model/flight';
 export class FlightSearchComponent implements OnInit {
 
   flightSearchDT = new SearchFlightDT();
-  flight : Flight[] = [];
-  flightFlag:boolean = false;
+  flight : Flight[];
   
   constructor(private userService:UserService) { }
 
@@ -23,7 +22,6 @@ export class FlightSearchComponent implements OnInit {
     this.userService.fetchFlights(this.flightSearchDT).subscribe(response => {
       console.log(JSON.stringify(response));
       this.flight =response;
-      this.flightFlag = true;
       console.log(this.flight);
       alert(JSON.stringify(response));
     })
