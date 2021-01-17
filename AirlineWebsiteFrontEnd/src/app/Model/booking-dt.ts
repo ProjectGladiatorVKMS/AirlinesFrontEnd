@@ -1,7 +1,7 @@
 import { Passenger } from "./passenger";
 
 export class BookingDt {
-    noOfpassenger:number;
+    noOfPassenger:Number;
     cost:number;
     userId:number;
     flightId:number;

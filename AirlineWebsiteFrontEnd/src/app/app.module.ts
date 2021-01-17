@@ -18,6 +18,10 @@ import { AdminNavComponent } from './NavBar/admin-nav/admin-nav.component';
 import { BookFlightComponent } from './UserOperation/book-flight/book-flight.component';
 import { UserRegistrationComponent } from './UserOperation/user-registration/user-registration.component';
 import { PaymentWindowComponent } from './UserOperation/payment-window/payment-window.component';
+import { DisplayBookingComponent } from './UserOperation/display-booking/display-booking.component';
+import { DisplayTicketComponent } from './UserOperation/display-ticket/display-ticket.component';
+import { DisplayCancellationComponent } from './UserOperation/display-cancellation/display-cancellation.component';
+import { AboutUsComponent } from './Home/about-us/about-us.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +37,11 @@ import { PaymentWindowComponent } from './UserOperation/payment-window/payment-w
     AdminNavComponent,
     BookFlightComponent,
     UserRegistrationComponent,
-    PaymentWindowComponent
+    PaymentWindowComponent,
+    DisplayBookingComponent,
+    DisplayTicketComponent,
+    DisplayCancellationComponent,
+    AboutUsComponent
   ],
   imports: [
     BrowserModule,

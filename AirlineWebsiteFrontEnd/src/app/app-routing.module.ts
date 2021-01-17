@@ -1,3 +1,6 @@
+import { AboutUsComponent } from './Home/about-us/about-us.component';
+import { DisplayTicketComponent } from './UserOperation/display-ticket/display-ticket.component';
+import { DisplayBookingComponent } from './UserOperation/display-booking/display-booking.component';
 import { PaymentWindowComponent } from './UserOperation/payment-window/payment-window.component';
 import { BookFlightComponent } from './UserOperation/book-flight/book-flight.component';
 import { UserRegistrationComponent } from './UserOperation/user-registration/user-registration.component';
@@ -21,7 +24,10 @@ const routes: Routes = [
   {path:'displayAllFlight', component: DisplayAllFlightComponent},
   {path: 'userRegistration', component: UserRegistrationComponent},
   {path:'bookFlight', component: BookFlightComponent},
-  {path: 'paymentWindow', component: PaymentWindowComponent}
+  {path: 'paymentWindow', component: PaymentWindowComponent},
+  {path: 'displayBookings',component:DisplayBookingComponent},
+  {path:'displayTicket', component: DisplayTicketComponent},
+  {path: 'aboutUs', component: AboutUsComponent}
 ];
 
 @NgModule({

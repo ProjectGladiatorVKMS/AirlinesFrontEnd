@@ -29,4 +29,16 @@ export class UserService {
     let url = "http://localhost:8085/updateBooking?bookingId="+bookingId;
     return this.httpClient.get(url);
   }
+  displayBookings(userId:Number):Observable<any>{
+    let url = "http://localhost:8085/fetchBooking?userId="+userId;
+    return this.httpClient.get(url);
+  }
+  cancelBooking(bookingId:number):Observable<any>{
+    let url = "http://localhost:8085/cancelTicket?bookingId="+bookingId;
+    return this.httpClient.get(url);
+  }
+  generateTicket(bookingId:Number):Observable<any>{
+    let url = "http://localhost:8085/fetchTicket?bookingId="+bookingId;
+    return this.httpClient.get(url);
+  }
 }

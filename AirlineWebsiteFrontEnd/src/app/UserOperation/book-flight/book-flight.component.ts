@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { UserService } from 'src/app/Services/user.service';
 import { BookingDt } from './../../Model/booking-dt';
 import { Component, OnInit } from '@angular/core';
@@ -23,7 +24,7 @@ export class BookFlightComponent implements OnInit {
   ecoCost:number;
   busCost:number;
   
-  constructor(private userService: UserService) {
+  constructor(private userService: UserService, private router:Router) {
     
    }
 
@@ -54,7 +55,7 @@ export class BookFlightComponent implements OnInit {
   addBooking(){
     this.bookingDT.userId = Number(sessionStorage.getItem('userId'));
     this.bookingDT.flightId = Number(sessionStorage.getItem('flightId'));
-    this.bookingDT.noOfpassenger = Number(sessionStorage.getItem('noOfPassengers'));
+    this.bookingDT.noOfPassenger = this.noOfPassengers;
     this.bookingDT.travelClass = String(sessionStorage.getItem('travelClass'));
     if(this.bookingDT.travelClass == "Economy")
     {
@@ -68,9 +69,10 @@ export class BookFlightComponent implements OnInit {
     console.log(this.bookingDT)
     this.userService.addBooking(this.bookingDT).subscribe(response => {
       console.log(JSON.stringify(response));
-      if(response.message == "Ticket Booking in Progress"){
-        sessionStorage.setItem('bookingId',String(response.generatedUserId));
-      }
+       if(response.message == "Ticket Booking in Progress"){
+         sessionStorage.setItem('bookingId',String(response.generatedId));
+       }
+      this.router.navigate(['paymentWindow']);
     })
   }
 
