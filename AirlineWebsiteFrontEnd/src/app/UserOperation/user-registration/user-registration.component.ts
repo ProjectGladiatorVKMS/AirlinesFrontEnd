@@ -12,6 +12,8 @@ export class UserRegistrationComponent implements OnInit {
 
   user = new User;
 
+  confirmPassword:String;
+
   constructor(private userService: UserService, private router: Router) { }
 
   ngOnInit() {

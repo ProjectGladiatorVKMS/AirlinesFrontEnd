@@ -13,6 +13,7 @@ export class FlightSearchComponent implements OnInit {
 
   flightSearchDT = new SearchFlightDT();
   flight : Flight[]= [];
+  
   constructor(private userService:UserService) { }
 
   ngOnInit() {
