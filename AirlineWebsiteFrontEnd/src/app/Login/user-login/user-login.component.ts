@@ -31,7 +31,8 @@ export class UserLoginComponent implements OnInit {
       if(response.result==true)
       {
         sessionStorage.setItem('userId',String(response.fetchedUserId));
-        this.router.navigate(['flightSearch']);
+        sessionStorage.setItem('userName',String(response.fetchedName));
+        this.router.navigate(['dashBoard']);
       }
 
     })

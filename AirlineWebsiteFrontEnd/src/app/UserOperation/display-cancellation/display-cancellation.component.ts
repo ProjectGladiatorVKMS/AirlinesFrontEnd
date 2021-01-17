@@ -7,9 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DisplayCancellationComponent implements OnInit {
 
+  refund:String;
   constructor() { }
 
   ngOnInit() {
+    this.refund = sessionStorage.getItem('refund');
   }
 
 }

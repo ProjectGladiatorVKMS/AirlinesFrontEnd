@@ -25,7 +25,7 @@ export class AdminLoginComponent implements OnInit {
       if(response.result==true)
       {
         sessionStorage.setItem('adminId',String(response.fetchedUserId));
-        this.router.navigate(['addFlight']);
+        this.router.navigate(['adminDashboard']);
       }
       
       console.log(response);

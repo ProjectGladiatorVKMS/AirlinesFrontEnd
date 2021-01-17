@@ -32,6 +32,7 @@ export class DisplayBookingComponent implements OnInit {
   cancelBooking(bookingId:number){
     this.userService.cancelBooking(bookingId).subscribe(response => {
       alert(JSON.stringify(response));
+      sessionStorage.setItem('refund',response);
     })
   }
   goToTicket(bookingId: number){

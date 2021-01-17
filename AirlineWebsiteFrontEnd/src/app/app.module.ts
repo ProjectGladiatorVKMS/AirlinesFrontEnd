@@ -22,6 +22,9 @@ import { DisplayBookingComponent } from './UserOperation/display-booking/display
 import { DisplayTicketComponent } from './UserOperation/display-ticket/display-ticket.component';
 import { DisplayCancellationComponent } from './UserOperation/display-cancellation/display-cancellation.component';
 import { AboutUsComponent } from './Home/about-us/about-us.component';
+import { DashBoardComponent } from './UserOperation/dash-board/dash-board.component';
+import { AdminDashboardComponent } from './AdminOperation/admin-dashboard/admin-dashboard.component';
+import { PaymentSuccessfulComponent } from './UserOperation/payment-successful/payment-successful.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +44,10 @@ import { AboutUsComponent } from './Home/about-us/about-us.component';
     DisplayBookingComponent,
     DisplayTicketComponent,
     DisplayCancellationComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    DashBoardComponent,
+    AdminDashboardComponent,
+    PaymentSuccessfulComponent
   ],
   imports: [
     BrowserModule,

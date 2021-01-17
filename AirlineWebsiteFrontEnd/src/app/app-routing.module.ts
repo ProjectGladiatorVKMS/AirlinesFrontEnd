@@ -1,3 +1,5 @@
+import { AdminDashboardComponent } from './AdminOperation/admin-dashboard/admin-dashboard.component';
+import { DashBoardComponent } from './UserOperation/dash-board/dash-board.component';
 import { AboutUsComponent } from './Home/about-us/about-us.component';
 import { DisplayTicketComponent } from './UserOperation/display-ticket/display-ticket.component';
 import { DisplayBookingComponent } from './UserOperation/display-booking/display-booking.component';
@@ -12,6 +14,8 @@ import { FlightSearchComponent } from './UserOperation/flight-search/flight-sear
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { UserLoginComponent } from './Login/user-login/user-login.component';
+import { DisplayCancellationComponent } from './UserOperation/display-cancellation/display-cancellation.component';
+import { PaymentSuccessfulComponent } from './UserOperation/payment-successful/payment-successful.component';
 
 
 const routes: Routes = [
@@ -27,7 +31,11 @@ const routes: Routes = [
   {path: 'paymentWindow', component: PaymentWindowComponent},
   {path: 'displayBookings',component:DisplayBookingComponent},
   {path:'displayTicket', component: DisplayTicketComponent},
-  {path: 'aboutUs', component: AboutUsComponent}
+  {path: 'aboutUs', component: AboutUsComponent},
+  {path: 'dashBoard', component: DashBoardComponent},
+  {path: 'adminDashboard', component: AdminDashboardComponent},
+  {path:'cancellation',component:DisplayCancellationComponent},
+  {path: 'paymentSuccess', component: PaymentSuccessfulComponent}
 ];
 
 @NgModule({
