@@ -71,7 +71,7 @@
     </div>
     <div class="form-group col-md-6" >
         <label for="inputAddress">Cost of Economy Class</label>
-        <input type="number" class="form-control"  name="economyClassCost" required pattern="[0-9]+" #ecoCost="ngModel" [(ngModel)]='flightDT.economyClassCost'>
+        <input type="number" class="form-control"  name="economyClassCost" required pattern="[0-9]+" placeholder="₹" #ecoCost="ngModel" [(ngModel)]='flightDT.economyClassCost'>
         <div *ngIf = "ecoCost?.touched && ecoCost?.invalid" class="text-danger">
           <div *ngIf = "ecoCost.errors?.required">
             Cost of Economy Seats can't be empty
@@ -96,7 +96,7 @@
       </div>
       <div class="form-group col-md-6">
           <label for="inputAddress">Cost of Business Class</label>
-          <input type="number" class="form-control"  name="businessClassCost" required pattern="[0-9]+" #busCost="ngModel" [(ngModel)]='flightDT.businessClassCost'>
+          <input type="number" class="form-control"  name="businessClassCost" required pattern="[0-9]+" placeholder="₹" #busCost="ngModel" [(ngModel)]='flightDT.businessClassCost'>
           <div *ngIf = "busCost?.touched && busCost?.invalid" class="text-danger">
             <div *ngIf = "busCost.errors?.required">
             Cost of Business Seats can't be empty

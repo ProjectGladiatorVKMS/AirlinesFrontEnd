@@ -19,7 +19,7 @@
           </div>
         <div class="form-group col-md-6">
             <label for="inputFName4">First Name</label>
-            <input type="text" class="form-control" id="firstName" name="firstName" required pattern="[a-zA-Z][a-zA-z ]+" #first="ngModel" [(ngModel)]='user.fName'>
+            <input type="text" class="form-control" id="firstName" name="firstName" required pattern="[a-zA-Z]+" #first="ngModel" [(ngModel)]='user.fName'>
             <div *ngIf = "first?.touched && first?.invalid" class="text-danger">
               <div *ngIf = "first.errors?.required">
                   First Name can't be Empty
@@ -31,7 +31,7 @@
           </div>
           <div class="form-group col-md-6">
             <label for="inputLNamel4">Last Name</label>
-            <input type="text" class="form-control" id="lastName" name="lastName" required pattern="[a-zA-Z][a-zA-z ]+" #last="ngModel" [(ngModel)]='user.lName'>
+            <input type="text" class="form-control" id="lastName" name="lastName" required pattern="[a-zA-Z]+" #last="ngModel" [(ngModel)]='user.lName'>
             <div *ngIf = "last?.touched && last?.invalid" class="text-danger">
               <div *ngIf = "last.errors?.required">
                   Last Name can't be Empty

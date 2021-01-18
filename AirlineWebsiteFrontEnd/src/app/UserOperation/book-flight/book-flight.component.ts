@@ -69,9 +69,9 @@ export class BookFlightComponent implements OnInit {
     }
     sessionStorage.setItem('cost',String(this.bookingDT.cost));
     this.bookingDT.passengerList = this.passengerList;
-    console.log(this.bookingDT)
+    //console.log(this.bookingDT)
     this.userService.addBooking(this.bookingDT).subscribe(response => {
-      console.log(JSON.stringify(response));
+      //console.log(JSON.stringify(response));
        if(response.message == "Ticket Booking in Progress"){
          sessionStorage.setItem('bookingId',String(response.generatedId));
        }

@@ -91,8 +91,8 @@
         <td>{{f.arrival}}</td>
         <td>{{f.journeyDate}}</td>
         <td>{{f.duration}}</td>
-        <td>{{f.economyClassCost}}</td>
-        <td>{{f.businessClassCost}}</td>
+        <td>₹ {{f.economyClassCost}}</td>
+        <td>₹ {{f.businessClassCost}}</td>
         <td><button type="button" class="btn btn-primary" (click)="flightStore(f.flightId, f.economyClassCost, f.businessClassCost)" >Book Now</button></td>
       </tr>
     </tbody>
