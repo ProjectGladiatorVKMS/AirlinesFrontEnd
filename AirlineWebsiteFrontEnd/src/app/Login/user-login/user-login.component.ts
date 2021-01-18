@@ -24,10 +24,10 @@ export class UserLoginComponent implements OnInit {
   
 
   loginCheck(){
-    console.log(this.userLogin);
+   // console.log(this.userLogin);
     this.loginService.userLogin(this.userLogin).subscribe(response => {
-      alert(JSON.stringify(response));
-      console.log(response);
+      //alert(JSON.stringify(response));
+      //console.log(response);
       if(response.result==true)
       {
         sessionStorage.setItem('userId',String(response.fetchedUserId));

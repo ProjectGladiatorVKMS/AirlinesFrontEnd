@@ -20,9 +20,9 @@ export class AddFlightComponent implements OnInit {
   addFlight(){
     this.flightDT.noOfSeats=this.flightDT.economySeats+this.flightDT.businessSeats;
     this.flightDT.adminId=Number(sessionStorage.getItem('adminId'));
-    console.log(this.flightDT);
+    //console.log(this.flightDT);
     this.adminService.fetchFlights(this.flightDT).subscribe(response => {
-      alert(JSON.stringify(response));
+      //alert(JSON.stringify(response));
       this.router.navigate(['flightAdded']);
     })
     

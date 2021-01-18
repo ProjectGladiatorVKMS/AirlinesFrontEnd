@@ -20,19 +20,19 @@ export class DisplayAllFlightComponent implements OnInit {
   }
   displayAllFlights(){
     this.adminService.displayAllFlights().subscribe(response => {
-      console.log(JSON.stringify(response));
+     // console.log(JSON.stringify(response));
       this.flight = response;
-      console.log(this.flight);
+      //console.log(this.flight);
     })
   }
   delete(flightId: number){
-    console.log(flightId);
+    //console.log(flightId);
     this.adminService.deleteFlight(flightId).subscribe(response => {
       
       this.adminService.displayAllFlights().subscribe(response1 => {
-        console.log(JSON.stringify(response1));
+        //console.log(JSON.stringify(response1));
         this.flight = response1;
-        console.log(this.flight);
+        //console.log(this.flight);
       });
     
     });

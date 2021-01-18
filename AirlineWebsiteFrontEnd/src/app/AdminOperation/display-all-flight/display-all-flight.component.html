@@ -1,4 +1,7 @@
 <app-admin-nav></app-admin-nav>
+<br>
+<h2 align="center">Flights on Schedule</h2>
+<br>
 <table  style="width: 80%; margin: auto;" class="table table-striped">
     <thead>
       <tr>
@@ -23,8 +26,8 @@
         <td>{{f.arrival}}</td>
         <td>{{f.journeyDate}}</td>
         <td>{{f.duration}}</td>
-        <td>{{f.economyClassCost}}</td>
-        <td>{{f.businessClassCost}}</td>
+        <td>₹ {{f.economyClassCost}}</td>
+        <td>₹ {{f.businessClassCost}}</td>
         <td><button type="button" class="btn btn-danger" (click)="delete(f.flightId)">Delete</button></td>
     </tr>
     </tbody>
