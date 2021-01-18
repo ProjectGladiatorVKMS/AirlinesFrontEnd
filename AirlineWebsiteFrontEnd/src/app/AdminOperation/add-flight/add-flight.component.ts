@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { AdminService } from './../../Services/admin.service';
 import { FlightDt } from '../../Model/flight-dt';
 import { Component, OnInit } from '@angular/core';
@@ -11,7 +12,7 @@ export class AddFlightComponent implements OnInit {
 
   flightDT: FlightDt = new FlightDt();
 
-  constructor(private adminService: AdminService) { }
+  constructor(private adminService: AdminService, private router : Router) { }
 
   ngOnInit() {
   }
@@ -21,7 +22,10 @@ export class AddFlightComponent implements OnInit {
     this.flightDT.adminId=Number(sessionStorage.getItem('adminId'));
     console.log(this.flightDT);
     this.adminService.fetchFlights(this.flightDT).subscribe(response => {
-      alert(JSON.stringify(response));})
+      alert(JSON.stringify(response));
+      this.router.navigate(['flightAdded']);
+    })
+    
   }
 
 }

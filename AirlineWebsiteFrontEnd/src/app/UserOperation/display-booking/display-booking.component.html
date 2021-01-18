@@ -28,8 +28,8 @@
         <td>₹ {{b.cost}}</td>
         <td>{{b.bookingDate}}</td>
         <td>{{b.travelClass}}</td>
-        <td><button type="button" class="btn btn-primary" routerLink="/displayTicket" (click)="goToTicket(b.bookingId)">Generate Ticket</button></td>
-        <td><button type="button" class="btn btn-danger" routerLink="/cancellation" (click)="cancelBooking(b.bookingId)">Cancel Booking</button></td>
+        <td><button type="button" class="btn btn-primary"  (click)="goToTicket(b.bookingId)">Generate Ticket</button></td>
+        <td><button type="button" class="btn btn-danger"  (click)="cancelBooking(b.bookingId)">Cancel Booking</button></td>
     </tr>
         <tr>
             <th scope="col">Passenger Id</th>

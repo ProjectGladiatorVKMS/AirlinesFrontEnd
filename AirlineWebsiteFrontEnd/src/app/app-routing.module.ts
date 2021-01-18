@@ -1,3 +1,4 @@
+import { FlightAddedComponent } from './AdminOperation/flight-added/flight-added.component';
 import { AdminDashboardComponent } from './AdminOperation/admin-dashboard/admin-dashboard.component';
 import { DashBoardComponent } from './UserOperation/dash-board/dash-board.component';
 import { AboutUsComponent } from './Home/about-us/about-us.component';
@@ -35,7 +36,8 @@ const routes: Routes = [
   {path: 'dashBoard', component: DashBoardComponent},
   {path: 'adminDashboard', component: AdminDashboardComponent},
   {path:'cancellation',component:DisplayCancellationComponent},
-  {path: 'paymentSuccess', component: PaymentSuccessfulComponent}
+  {path: 'paymentSuccess', component: PaymentSuccessfulComponent},
+  {path: 'flightAdded', component: FlightAddedComponent}
 ];
 
 @NgModule({

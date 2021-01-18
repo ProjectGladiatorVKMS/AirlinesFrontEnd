@@ -21,7 +21,7 @@ export class AdminLoginComponent implements OnInit {
   loginCheck(){
     console.log(this.adminLogin);
     this.loginService.adminLogin(this.adminLogin).subscribe(response => {
-      alert(JSON.stringify(response));
+      //alert(JSON.stringify(response));
       if(response.result==true)
       {
         sessionStorage.setItem('adminId',String(response.fetchedUserId));

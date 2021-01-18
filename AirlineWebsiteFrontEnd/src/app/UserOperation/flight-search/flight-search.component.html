@@ -39,7 +39,7 @@
       </div>
       <div class="form-group col-md-6">
         <label for="inputPassword4">Travel Date</label>
-        <input type="date" class="form-control" id="password" name="travelDate" min="2021-01-17" required #date="ngModel" [(ngModel)]='flightSearchDT.travelDate'>
+        <input type="date" class="form-control" id="password" name="travelDate" min="2021-01-18" required #date="ngModel" [(ngModel)]='flightSearchDT.travelDate'>
         <div *ngIf = "date?.touched && date?.invalid" class="text-danger">
           <div *ngIf = "date.errors?.required">
             Travel Date can't be empty
@@ -90,7 +90,7 @@
         <td>{{f.duration}}</td>
         <td>{{f.economyClassCost}}</td>
         <td>{{f.businessClassCost}}</td>
-        <td><button type="button" class="btn btn-primary" (click)="flightStore(f.flightId, f.economyClassCost, f.businessClassCost)" routerLink="/bookFlight">Book Now</button></td>
+        <td><button type="button" class="btn btn-primary" (click)="flightStore(f.flightId, f.economyClassCost, f.businessClassCost)" >Book Now</button></td>
       </tr>
     </tbody>
   </table>

@@ -15,7 +15,7 @@
           </div>
       </div>
       </div>
-        <form style="width: 30%;margin: auto;" (ngSubmit)="addPassenger()" >
+        <form style="width: 30%;margin: auto;" #frm="ngForm" (ngSubmit)="addPassenger()" >
         <div class="form-row">
         <div class="form-group ">
             <label for="inputFName4">First Name</label>
@@ -44,7 +44,7 @@
           <div class="form-group ">
             <label for="inputTitle">Gender</label>
             <select id="inputTitle" class="form-control" name="gender" #gend="ngModel" required [(ngModel)]='gender'>
-              <option selected>Male</option>
+              <option>Male</option>
               <option>Female</option>
               <option>Other</option>
             </select>
@@ -67,8 +67,9 @@
           </div>
           </div>
     </div>
-    <button type="submit" class="btn btn-primary " [disabled]="disable" >Add Passeneger</button>
-   <br> <br> <button type="reset" class="btn btn-primary " [disabled]="disable" >Reset</button>
+    <div class="text-danger">{{message}}</div>
+    <button type="submit" class="btn btn-primary " [disabled]="frm.invalid" [disabled]="disable" >Add Passeneger</button>
+   <br> <br> <button type="reset" class="btn btn-primary"  [disabled]="disable" >Reset</button>
     </form>
 </div>
     <button type="submit" class="btn btn-primary " [disabled]="!disable" >Proceed to Payment</button>

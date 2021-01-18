@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { BookFlightComponent } from './../book-flight/book-flight.component';
 import { SearchFlightDT } from './../../Model/search-flight-dt';
 import { Component, OnInit } from '@angular/core';
@@ -14,7 +15,7 @@ export class FlightSearchComponent implements OnInit {
   flightSearchDT = new SearchFlightDT();
   flight : Flight[]= [];
   
-  constructor(private userService:UserService) { }
+  constructor(private userService:UserService, private router:Router) { }
 
   ngOnInit() {
   }
@@ -33,6 +34,7 @@ export class FlightSearchComponent implements OnInit {
     sessionStorage.setItem('flightId',String(id));
     sessionStorage.setItem('ecoCost', String(ecoCost));
     sessionStorage.setItem('busCost', String(busCost));
+    this.router.navigate(['bookFlight'])
   }
 
 }

@@ -23,6 +23,7 @@ export class BookFlightComponent implements OnInit {
   count:number = 0;
   ecoCost:number;
   busCost:number;
+  message:String;
   
   constructor(private userService: UserService, private router:Router) {
     
@@ -46,10 +47,12 @@ export class BookFlightComponent implements OnInit {
     }
     console.log(dict);
     this.passengerList.push(dict);
+    this.message = "Passenger Added Successfully";
     console.log(this.passengerList);
     this.count++;
     if(this.count == this.noOfPassengers){
       this.disable = true;
+      this.message = "Passengers Added Proceed to Payment";
     }
   }
   addBooking(){
