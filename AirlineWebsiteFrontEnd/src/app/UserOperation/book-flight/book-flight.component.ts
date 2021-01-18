@@ -45,10 +45,10 @@ export class BookFlightComponent implements OnInit {
       "gender":this.gender,
       "age":this.age
     }
-    console.log(dict);
+    //console.log(dict);
     this.passengerList.push(dict);
     this.message = "Passenger Added Successfully";
-    console.log(this.passengerList);
+    //console.log(this.passengerList);
     this.count++;
     if(this.count == this.noOfPassengers){
       this.disable = true;
